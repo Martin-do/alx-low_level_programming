@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * mai - this is the main function
+ * main - this is the main function
  * Return: this reurns 0 if no error
  */
 int main()
@@ -12,6 +12,6 @@ int main()
 	printf("Size of a long int: %d byte(s)\n", sizeof(long int));
 	printf("Size of a long long int: %d byte(s)\n", sizeof(long long int));
 	printf("Size of a float: %d byte(s)\n", sizeof(float));
-	return 0;
+	return (0);
 }
 
