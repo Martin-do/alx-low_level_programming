@@ -14,8 +14,11 @@ int main(void)
 	for (; a < 10; a++)
 	{
 		putchar('0' + a);
-		putchar(',');
-		putchar(' ');
+		if (a < 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 	return (0);
 }
