@@ -8,6 +8,11 @@
  */
 int main(void)
 {
-	putchar("abcdefghijklmnopqrstuvwxyz");
+	char alpha = 'a';
+
+	for (; alpha <= 'z'; alpha++)
+	{
+		putchar(alpha);
+	}
 	return (0);
 }
