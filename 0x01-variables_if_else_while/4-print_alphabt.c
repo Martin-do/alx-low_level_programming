@@ -13,7 +13,7 @@ int main(void)
 
 	for (; alphaL <= 'z'; alphaL++)
 	{
-		if ((alphaU == 'q') || (alphaU == 'e'))
+		if ((alphaL == 'q') || (alphaL == 'e'))
 		{
 			alphaL++;
 		}
