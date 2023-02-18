@@ -6,33 +6,23 @@
  */
 int main(void)
 {
-	int a = 0;
-	int b = 1;
-	int count = 9;
-	int loop = 0;
-	int comma = 1;
+	int a, b;
 
-	for (loop; loop <= 9; loop++)
+	for (a = 0; a <= 8; a++)
 	{
-		for (count; count != 0; count--)
+		for (b = a + 1; b <= 9; b++)
 		{
-		if (b <= 9)
-		{
-			putchar('0' + a);
-			putchar('0' + b);
-			b++;
-			if (comma <= 8)
+			if (a != b)
 			{
-				putchar(',');
-				putchar(' ');
+				putchar('0' + a);
+				putchar('0' + b);
+				if (a + b < 17)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
-		}
-	comma++;
-	b = loop + 1;
-	count = 9;
-	a++;
-	b++;
 	}
 	return (0);
 }
