@@ -9,7 +9,6 @@ int main(void)
 {
 	int a, b, c, d, num, sum;
 
-	sum = a + b + c + d;
 	for (a = 0; a <= 9; a++)
 	{
 		for (b = 0; b <= 9; b++)
@@ -24,6 +23,7 @@ int main(void)
 					putchar(' ');
 					putchar('0' + c);
 					putchar('0' + d);
+					sum = a + b + c + d;
 					if (((a != 9) & (sum < 36)) || (a == 9) & (sum < 35))
 					{
 						putchar(',');
