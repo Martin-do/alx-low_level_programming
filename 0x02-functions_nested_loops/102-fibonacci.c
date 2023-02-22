@@ -7,7 +7,8 @@
  */
 int main(void)
 {
-	int n, seq, n_seq, i;
+	long int n, seq, n_seq;
+	int i;
 
 	n = 0;
 	seq = 1;
