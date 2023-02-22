@@ -10,7 +10,7 @@ int main(void)
 	int n, seq, n_seq, i;
 
 	n = 0;
-	seq = 1;
+	seq = 0;
 	i = 0;
 	while (i <= 50)
 	{
