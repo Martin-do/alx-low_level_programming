@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * print_to_98 - a function
@@ -30,4 +31,5 @@ void print_to_98(int n)
 			}
 		}
 	}
+	printf("\n");
 }
