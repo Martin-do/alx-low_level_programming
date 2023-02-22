@@ -12,14 +12,14 @@ int main(void)
 	n = 0;
 	seq = 1;
 	i = 0;
-	while (i <= 50)
+	while (i < 50)
 	{
 		n_seq = seq + n;
 		printf("%d", n_seq);
 		n = seq;
 		seq = n_seq;
 		i++;
-		if (i <= 49)
+		if (i < 49)
 		{
 			printf(", ");
 		}
