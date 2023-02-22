@@ -15,7 +15,7 @@ int main(void)
 	while (i < 50)
 	{
 		n_seq = seq + n;
-		printf("%d", n_seq);
+		printf("%li", n_seq);
 		n = seq;
 		seq = n_seq;
 		i++;
