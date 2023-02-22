@@ -15,7 +15,7 @@ int main(void)
 	sum = 0;
 	for (; n < 1024; n++)
 	{
-		if ((mod3 == 0) && (mod5 == 0))
+		if ((mod3 == 0) || (mod5 == 0))
 		{
 			sum += n;
 		}
