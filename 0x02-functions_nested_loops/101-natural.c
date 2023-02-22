@@ -10,11 +10,11 @@ int main(void)
 	int n, mod3, mod5, sum;
 
 	n = 0;
-	mod3 = n % 3;
-	mod5 = n % 5;
 	sum = 0;
 	for (; n < 1024; n++)
 	{
+		mod3 = n % 3;
+		mod5 = n % 5;
 		if ((mod3 == 0) || (mod5 == 0))
 		{
 			sum += n;
