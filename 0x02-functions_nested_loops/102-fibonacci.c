@@ -19,7 +19,7 @@ int main(void)
 		n = seq;
 		seq = n_seq;
 		i++;
-		if (i < 49)
+		if (i <= 49)
 		{
 			printf(", ");
 		}
