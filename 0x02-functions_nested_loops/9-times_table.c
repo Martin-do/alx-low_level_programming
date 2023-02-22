@@ -26,19 +26,8 @@ void times_table(void)
 			}
 			if (b < 9)
 			{
-				if ((a < 2) & (mul < 8))
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-				}
-				else if ((b < 4) & (a < 4) & (mul < 8))
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-				}
-				else if ((b < 2) & (a < 10) & (mul < 5))
+				if (((a < 2) & (mul < 10)) || ((b < 4) & (a < 4) & (mul < 8))
+				|| ((b < 2) & (a < 10) & (mul < 5)))
 				{
 					_putchar(',');
 					_putchar(' ');
