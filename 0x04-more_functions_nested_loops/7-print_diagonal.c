@@ -2,6 +2,7 @@
 
 /**
  * print_diagonal - prints diagonal
+ * @n: number of times
  */
 
 void print_diagonal(int n)
@@ -12,7 +13,14 @@ void print_diagonal(int n)
 	{
 		for (; num < n; num++)
 		{
-			_putchar('\\');
+			if (num == n - 1)
+			{
+				_putchar('\\');
+			}
+			else
+			{
+				_putchar(' ');
+			}
 		}
 		_putchar('\n');
 	}
