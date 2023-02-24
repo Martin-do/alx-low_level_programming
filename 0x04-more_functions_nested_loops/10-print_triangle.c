@@ -12,7 +12,7 @@ void print_triangle(int size)
 	{
 		for (num = 0; num < size; num++)
 		{
-			for (hash = 0; hash + 1 < size; hash++)
+			for (hash = 0; hash + 1 < size - num; hash++)
 			{
 				_putchar(' ');
 			}
