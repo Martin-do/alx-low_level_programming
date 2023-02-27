@@ -54,7 +54,7 @@ int main(void)
 {
 	int N = 10;
 
-	randomPasswordGeneration(N);
+	keygen(N);
 	return (0);
 }
 
