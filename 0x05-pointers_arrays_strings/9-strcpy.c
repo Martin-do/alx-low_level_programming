@@ -6,7 +6,7 @@
  * @src: source
  * Return: return destination
  */
-char *_strcpy(*dest, *src)
+char *_strcpy(char *dest, char *src)
 {
 	int num = 0;
 
