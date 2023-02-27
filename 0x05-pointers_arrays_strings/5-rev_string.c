@@ -21,12 +21,11 @@ void rev_string(char *s)
 	}
 	count -= 1;
 	half = count / 2;
-	for (; half >= 0; count--)
+	for (; half >= 0; half--)
 	{
 		a = s[count - half];
 		b = s[half];
 		s[half] = a;
 		s[count - half] = b;
-		half--;
 	}
 }
