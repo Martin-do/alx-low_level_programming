@@ -20,7 +20,7 @@ void rev_string(char *s)
 	}
 	count -= 1;
 	half = count / 2;
-	for (; count >= 0; count--)
+	for (; half >= 0; count--)
 	{
 		a = s[count - half];
 		b = s[half];
