@@ -21,7 +21,7 @@ int same_len_cmp(char *a, char *b, int cnt)
 		{
 			cmp1++;
 		}
-		else if (a[num] > a[num])
+		else if (a[num] > b[num])
 		{
 			cmp2++;
 		}
@@ -39,6 +39,10 @@ int same_len_cmp(char *a, char *b, int cnt)
 		return (15);
 	}
 	else if (cmp3 == cmp1 & cmp3 == cmp2)
+	{
+		return (0);
+	}
+	else
 	{
 		return (0);
 	}
@@ -82,4 +86,5 @@ int _strcmp(char *s1, char *s2)
 	{
 		return (15);
 	}
+	return (0);
 }
