@@ -31,6 +31,10 @@ char *leet(char *a)
 		{
 			a[num] = '1';
 		}
+		else
+		{
+			a[num] = a[num];
+		}
 	}
 	return (a);
 }
