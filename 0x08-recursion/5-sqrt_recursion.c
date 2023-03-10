@@ -15,11 +15,11 @@ int valid_int(int square, int x)
 	}
 	else if (x > square / x)
 	{
-		return (check_int(square, x - 1));
+		return (valid_int(square, x - 1));
 	}
 	else if (x < square / x)
 	{
-		return (check_int(square, x + 1));
+		return (valid_int(square, x + 1));
 	}
 	else
 	{
@@ -49,6 +49,6 @@ int _sqrt_recursion(int n)
 	}
 	else
 	{
-		return (check_int(n, start));
+		return (valid_int(n, start));
 	}
 }
