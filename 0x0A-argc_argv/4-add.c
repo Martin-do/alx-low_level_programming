@@ -11,7 +11,7 @@ int main(int argc, char **argv)
 	int sum = 0;
 	int count = 0;
 
-	if (argc - 1 == 1)
+	if ((argc - 1 == 1) || (atoi(argv[count]) < 48) || (atoi(argv[count]) > 57))
 	{
 		printf("Error\n");
 		return (1);
