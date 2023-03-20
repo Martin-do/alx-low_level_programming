@@ -1,5 +1,4 @@
-#ifndef MAIN_H
-#define MAIN_H
+
 /**
  * init_dog - initializes a variable of type struct dog
  * @d: the name of the new type struct dog to be initialized
@@ -14,4 +13,4 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	d->age = age;
 	d->owner = owner;
 }
-#endif /* MAIN_H */
+
