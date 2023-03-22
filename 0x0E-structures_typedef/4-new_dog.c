@@ -22,6 +22,8 @@ char *_strdup(char *str)
 			length++;
 		}
 		str_c = malloc(length * sizeof(char) + 1);
+		if (str_c == NULL)
+			return (NULL);
 		while (*(str + i) != '\0')
 		{
 			*(str_c + i) = *(str + i);
@@ -41,30 +43,30 @@ char *_strdup(char *str)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *bingo;
-	char *n = _strdup(name);
-	char *o = _strdup(owner);
+	char *dog_name;
+	char *dog_owner;
 
 	bingo = malloc(sizeof(dog_t));
 	if (bingo == NULL)
 		return (NULL);
 
-	bingo->name = malloc(sizeof(n));
-	if (bingo->name == NULL)
+	dog_name = _strdup(name);
+	if (dog_name == NULL)
 	{
 		free(bingo);
 		return (NULL);
 	}
 
-	bingo->owner = malloc(sizeof(o));
-	if (bingo->owner == NULL)
+	dog_owner = _strdup(owner);
+	if (dog_owner == NULL)
 	{
-		free(bingo);
 		free(bingo->name);
+		free(bingo);
 		return (NULL);
 	}
 
-	bingo->name = n;
-	bingo->owner = o;
+	bingo->name = dog_name;
+	bingo->owner = dog_owner;
 	bingo->age = age;
 
 	return (bingo);
