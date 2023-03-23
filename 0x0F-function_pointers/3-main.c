@@ -15,6 +15,9 @@ int main(int argc, char **argv)
 	char *div = "/";
 	char *zero = "0";
 
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
+
 	if (argc - 1 != 3)
 	{
 		printf("Error\n");
@@ -25,13 +28,11 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(99);
 	}
-	if (((*argv[2] == *div) || (*argv[2] == *mod)) && (*argv[3] == *zero))
+	if ((*argv[3] == *zero) && ((*argv[2] == *mod) || (*argv[2] == *div)))
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[3]);
-i
-	return (get_op_func(argv[2])(num1, num2));
+	else
+		return (get_op_func(argv[2])(num1, num2));
 }
