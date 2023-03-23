@@ -11,8 +11,8 @@ int main(int argc, char **argv)
 {
 	int num1, num2;
 
-	char *modulus = "%";
-	char *division = "/";
+	char *mod = "%";
+	char *div = "/";
 	char *zero = "0";
 
 	if (argc - 1 != 3)
@@ -25,13 +25,13 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(99);
 	}
-	if (((argv[2] == division) || (argv[2] == modulus)) && (argv[3] == zero))
+	if (((*argv[2] == *div) || (*argv[2] == *mod)) && (*argv[3] == *zero))
 	{
 		printf("Error\n");
 		exit(100);
 	}
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
-
+i
 	return (get_op_func(argv[2])(num1, num2));
 }
