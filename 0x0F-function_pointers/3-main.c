@@ -13,6 +13,7 @@ int main(int argc, char **argv)
 
 	char *modulus = "%";
 	char *division = "/";
+	char *zero = "0";
 
 	if (argc - 1 != 3)
 	{
@@ -21,12 +22,12 @@ int main(int argc, char **argv)
 	}
 	if (get_op_func(argv[2]) == NULL)
 	{
-		print("Error\n");
+		printf("Error\n");
 		exit(99);
 	}
-	if (((argv[2] == d) || (argv[2] == m)) && (argv[3] == 0))
+	if (((argv[2] == division) || (argv[2] == modulus)) && (argv[3] == zero))
 	{
-		printf("Error3\n");
+		printf("Error\n");
 		exit(100);
 	}
 	num1 = atoi(argv[1]);
