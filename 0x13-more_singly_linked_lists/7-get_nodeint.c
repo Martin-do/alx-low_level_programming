@@ -5,7 +5,7 @@
  * @h: a listint_t list
  * Return: returns the number of elements
 */
-unsigned int listint_len(const listint_t *h)
+size_t listint_len(const listint_t *h)
 {
 	int i = 0;
 
@@ -24,9 +24,10 @@ unsigned int listint_len(const listint_t *h)
 */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	unsigned int i = 0;
+	unsigned int i = 0, len;
 
-	if (index < listint_len(head))
+	len = listint_len(head);
+	if (index < len)
 	{
 		for (; i < index; i++)
 		{
