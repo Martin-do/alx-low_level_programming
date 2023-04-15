@@ -56,17 +56,19 @@ int main(int argc, char **argv)
 	}
 	file_frm = file_check_a(argv[1]);
 	file_to = file_check_b(argv[2]);
-	content = read(file_frm, buffer, 1024);
+	while ((content = read(file_frm, buffer, 1024)) > 0)
+	{
+		file_cp = write(file_to, buffer, content);
+		if (file_cp == -1)
+		{
+			exit(99);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		}
+	}
 	if (content == -1)
 	{
 		exit(98);
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-	}
-	file_cp = write(file_to, buffer, content);
-	if (file_cp == -1)
-	{
-		exit(99);
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 	}
 	if (close(file_frm) == -1)
 	{
