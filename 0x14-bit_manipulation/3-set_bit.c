@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * get_bit - gets the bit value at a specified index
+ * set_bit - gets the bit value at a specified index
  * @n: the number to be converted to binary
  * @index: the position at which to return the bit val
- * Return: returns the bit value at the index
+ * Return: returns 1 if successful and -1 if error
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
@@ -12,10 +12,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 
 	if (index >= (sizeof(*n) * 8))
 		return (-1);
-	else
-	{
-		mask = 1;
-		*n = *n | (mask << index);
-	}
-	return (0);
+	inter = 1;
+	*n = *n | (inter << index);
+	return (1);
 }
