@@ -17,7 +17,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	while (bit_op)
 	{
 		sum += bit_op & 1;
-		xor = bit_op >> 1;
+		bit_op = bit_op >> 1;
 	}
 	return (sum);
 }
