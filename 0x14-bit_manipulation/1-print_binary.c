@@ -7,20 +7,18 @@
 */
 void print_binary(unsigned long int n)
 {
-	unsigned long int container = 1, i = 1;
-	unsigned long int bin_comb = 0;
+	int bool_0, i;
+	unsigned long int container;
 
-	while (container != 0)
+	bool_0 = 0;
+	for (i = 63; i >= 0; i--)
 	{
-		container = n >> 1;
-		if (container * 2 == n)
-		{
-			bin_comb += 0;
-		}
-		else
-			bin_comb += i;
-		n = container;
-		i *= 10;
+		container = (n >> i) & 1;
+		if (container == 1)
+			bool_0 = 1;
+		if (bool_0 == 1)
+			_putchar(((n >> i) & 1) + '0');
 	}
-	printf("%ld", bin_comb);
+	if (n == 0)
+		_putchar('0');
 }
